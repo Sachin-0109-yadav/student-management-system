@@ -1,0 +1,436 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f6fb;
+  color: #20243a;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 245px;
+  background: #fff;
+  border-right: 1px solid #e9eaf1;
+  position: fixed;
+  inset: 0 auto 0 0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 21px;
+  font-weight: 800;
+  color: #28234d;
+  margin-bottom: 55px;
+}
+
+.brand-icon {
+  background: #6956d8;
+  color: white;
+  border-radius: 11px;
+  padding: 9px;
+  display: flex;
+}
+
+.menu-label {
+  font-size: 11px;
+  color: #999bad;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px;
+  border-radius: 9px;
+  color: #77798d;
+  margin-bottom: 8px;
+}
+
+.nav-item.active {
+  color: #6552cf;
+  background: #f0edff;
+  font-weight: 700;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #eeeef3;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar, .student-avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9e5ff;
+  color: #6652ce;
+  font-weight: 700;
+}
+
+.sidebar-bottom strong, .sidebar-bottom small {
+  display: block;
+}
+
+.sidebar-bottom strong {
+  font-size: 13px;
+}
+
+.sidebar-bottom small {
+  color: #9294a5;
+  margin-top: 4px;
+}
+
+.main {
+  margin-left: 245px;
+  padding: 42px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.breadcrumb {
+  color: #9294a5;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: -0.7px;
+}
+
+.subtitle {
+  color: #9294a5;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.add-button {
+  border: 0;
+  background: #6956d8;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-weight: 600;
+}
+
+.add-button:hover {
+  background: #5542c1;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 240px));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #ededf3;
+  border-radius: 13px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.purple {
+  color: #6956d8;
+  background: #f0edff;
+}
+
+.blue {
+  color: #3686d9;
+  background: #eaf4ff;
+}
+
+.stat-card p {
+  color: #888a9c;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin-top: 6px;
+  font-size: 25px;
+}
+
+.table-card {
+  background: white;
+  border: 1px solid #ededf3;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.table-heading {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.table-heading h2 {
+  font-size: 18px;
+}
+
+.table-heading p {
+  color: #9294a5;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e8e8ef;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #9294a5;
+  width: 250px;
+}
+
+.search-box input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 700px;
+  text-align: left;
+}
+
+th {
+  color: #999bad;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  background: #fafafd;
+  padding: 15px 20px;
+}
+
+td {
+  padding: 17px 20px;
+  border-top: 1px solid #f0f0f5;
+  font-size: 13px;
+  color: #77798b;
+}
+
+.student-name {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #292b40;
+}
+
+.student-avatar {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+}
+
+.course-tag {
+  background: #f0edff;
+  color: #6652ce;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button, .close-button {
+  border: 0;
+  background: transparent;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.edit-button {
+  color: #4286d7;
+  background: #edf5ff !important;
+}
+
+.delete-button {
+  color: #e45d6a;
+  background: #fff0f1 !important;
+}
+
+.empty {
+  text-align: center;
+  padding: 35px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #17152b80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal {
+  background: white;
+  border-radius: 15px;
+  padding: 27px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.modal-heading h2 {
+  font-size: 20px;
+}
+
+.modal-heading p {
+  color: #9294a5;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.close-button {
+  color: #77798d;
+  align-self: flex-start;
+}
+
+.modal form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 15px 0 7px;
+}
+
+.modal form input {
+  width: 100%;
+  border: 1px solid #e4e4ed;
+  border-radius: 8px;
+  padding: 12px;
+  outline: none;
+}
+
+.modal form input:focus {
+  border-color: #6956d8;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.cancel-button {
+  background: #f1f1f6;
+  color: #55566b;
+  border: 0;
+  padding: 12px 17px;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 75px;
+    padding: 22px 12px;
+  }
+
+  .brand span, .menu-label, .nav-item:not(.active) {
+    display: none;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .nav-item {
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .main {
+    margin-left: 75px;
+    padding: 24px 16px;
+  }
+
+  .topbar, .table-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
